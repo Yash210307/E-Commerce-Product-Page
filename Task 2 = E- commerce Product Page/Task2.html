@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSphere - Product Page</title>
+    <link rel="stylesheet" href="Task2.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🛒 ShopSphere</div>
+
+        <div class="cart-container" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+</div>
+    </header>
+
+    <div class="container">
+
+        <div class="product-gallery">
+            <img id="main-image"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800"
+                alt="Product">
+
+            <div class="thumbnails">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800"
+                    onclick="changeImage(this)">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800"
+                    onclick="changeImage(this)">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800"
+                    onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="product-details">
+
+            <h1>Nike Air Max Pro</h1>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(4.9/5)</span>
+            </div>
+
+            <p class="description">
+                Experience superior comfort and style with the Nike Air Max Pro.
+                Designed for athletes and casual wear enthusiasts, featuring
+                breathable material and premium cushioning.
+            </p>
+
+            <div class="price">
+                ₹4,999 <span>₹7,999</span>
+            </div>
+
+            <div class="quantity">
+                <button onclick="decreaseQty()">-</button>
+                <span id="qty">1</span>
+                <button onclick="increaseQty()">+</button>
+            </div>
+
+            <div class="buttons">
+                <button class="cart-btn" onclick="addToCart()">
+                    Add to Cart
+                </button>
+
+                <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                    ❤ Wishlist
+                </button>
+            </div>
+
+            <div class="features">
+                <h3>Product Highlights</h3>
+                <ul>
+                    <li>Premium Quality Material</li>
+                    <li>Lightweight Design</li>
+                    <li>Breathable Fabric</li>
+                    <li>1 Year Warranty</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="notification">
+        Product Added to Cart ✔
+    </div>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <span onclick="toggleCart()">✖</span>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <h3>Total: <span id="cart-total">₹0</span></h3>
+
+        <button class="checkout-btn"
+            onclick="checkout()">
+            Proceed to Checkout
+        </button>
+    </div>
+
+</div>
+    <script src="Task2.js"></script>
+</body>
+</html>
